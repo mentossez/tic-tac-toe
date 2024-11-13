@@ -12,6 +12,11 @@
 .board-row {
   height: 100px;
   width: 300px;
+  margin-top: 5px;
+}
+
+h4 {
+  margin: 32px;
 }
 
 .square {
@@ -27,4 +32,58 @@
   background-color: pink;
   pointer-events: none;
   border: 1px solid red;
+}
+
+.controls {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s;
+  color: #cdd2d8;
+  margin: 5px;
+  width: 50%;
+  font-family: monospace;
+}
+
+.button-next {
+  background-color: #3e4a45;
+}
+
+.button-next:hover {
+  background-color: #506159;
+}
+
+.button-back {
+  background-color: #3a3f47;
+}
+
+.button-back:hover {
+  background-color: #4b5058;
+}
+
+.button:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:disabled {
+  background-color: #ddd;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.button-reset {
+  background-color: #4a3f3a;
+  width: 97%;
+  margin-top: 14px;
+}
+
+.button-reset:hover {
+  background-color: #5b514b;
 }
