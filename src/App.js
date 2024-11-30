@@ -13,7 +13,6 @@ function Square({ value, onClick, winnerCombination, currentIndex }) {
   );
 }
 
-// Need to write next back login for isXNext
 
 export default function App() {
   const emptyArray = Array(9).fill(null);
@@ -46,6 +45,8 @@ export default function App() {
       if (filteredStep?.length) {
         setValue(filteredStep);
         setCurrentStep(filteredStep);
+        const notNullValues = filteredStep?.filter(value => value !== null);
+        setIsXNext(notNullValues.length % 2 !== 0);
       }
     }
   }
@@ -54,6 +55,7 @@ export default function App() {
     setValue(emptyArray);
     setHistory([emptyArray]);
     setCurrentStep([]);
+    setIsXNext(false);
   }
 
   function calculateWinner(board) {
